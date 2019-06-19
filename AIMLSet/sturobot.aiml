@@ -29,10 +29,6 @@
         <template>还是你滚吧</template>
     </category>
     <category>
-        <pattern>是的</pattern>
-        <template>嗯</template>
-    </category>
-    <category>
         <pattern>白痴</pattern>
         <template>你才白痴</template>
     </category>
@@ -682,10 +678,6 @@
     <category>
         <pattern>你真聪明</pattern>
         <template>那是</template>
-    </category>
-    <category>
-        <pattern>好的</pattern>
-        <template>嗯</template>
     </category>
     <category>
         <pattern>你吃饭了吗</pattern>

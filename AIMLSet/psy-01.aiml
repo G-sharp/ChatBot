@@ -207,7 +207,7 @@
     <category>
     <pattern>*</pattern>
     <that>就像想法可以改变一样 优点也是可以更具需求陪养的 那么你希望自己可以获得哪些优点呢 </that>
-    <template>很好你已经有目标呢,那么大家继续努力吧!</template>
+        <template><think><set name="topic">闲聊</set></think>,那么大家继续努力吧!</template>
     </category>
 </topic>
 <!--<category>-->

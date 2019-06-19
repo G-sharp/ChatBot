@@ -26,7 +26,7 @@ dialog = ['为什么我付出那么多却没有回报?', '我一直把他当成�
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile="bot_brain.brn")
 else:
-    kernel.bootstrap(learnFiles="AIMLSet/cn-startup.xml", commands="LOAD CN TEST")
+    kernel.bootstrap(learnFiles="AIMLSet/cn-startup.xml", commands="LOAD TEST")
     # kernel.saveBrain("bot_brain.brn")
 if __name__ == '__main__':
     print("@@TEST START...@@")
