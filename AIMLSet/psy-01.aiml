@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+<meta name="language" content="zh"/>
+
+<category>
+<pattern>现在几点了</pattern>
+<template>
+<srai>TIME</srai>
+</template>
+</category>
+
+<category>
+<pattern>几点了</pattern>
+<template>
+<srai>TIME</srai>
+</template>
+</category>
+
+<category>
+<pattern>TIME</pattern>
+<template>
+ 现在是<date format="%Y"/>
+</template>
+</category>
+
+<category>
+<pattern>为什么我*没有回报</pattern>
+<template>可以和我聊聊当时发生了什么嘛 ?<think><set name="topic">感受</set></think></template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>抱歉 我还不能理解你说的.</that>
+    <template>不如你换个问题吧!</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <template>抱歉,我还不能理解你说的.</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>不如你换个问题吧</that>
+    <template>T_T,还是不明白!</template>
+</category>
+
+<category>
+    <pattern>你的名字*</pattern>
+    <template>我是智芯人啊,叫我小智!</template>
+</category>
+
+<category>
+    <pattern>你叫什么*</pattern>
+    <template>我是智芯人啊,叫我小智就好了!</template>
+</category>
+<category>
+    <pattern>我叫*</pattern>
+    <template>你好,<set name="master"><formal><star/></formal></set>,终于等到你~</template>
+</category>
+<topic name="感受">
+    <category>
+      <pattern>*</pattern>
+        <template>
+             <condition>
+                 <li name ="mood" value="">还记得当时你的情绪是怎样的吗 ?</li>
+                 <li name ="body" value=""><think><set name="body"><star/></set></think>看起来你遇到了很大的麻烦,可以试着去回想一下当时你想了一些什么吗?我们可以试着列出三条.</li>
+                 <li name ="mind1" value="">好的这是第一条 <think><set name="mind1"><star/></set></think></li>
+                 <li name ="mind2" value="">第二条有了,还有最后一条了! <think><set name="mind2"><star/></set></think></li>
+                 <li name ="mind3" value="">干的好!那么我们现在总结下你所说的,好吗?<think><set name="mind3"><star/></set></think></li>
+                 <li name ="isConclude" value=""><set name="isConclude">这件事发生后,你感到<get name="mood"/>,你觉得<get name="body"/>,当时你的想法包括<get name="mind1"/>,<get name="mind2"/>和<get name="mind3"/>,是这样的吗?</set></li>
+                 <li name ="topic" value="感受">好的,看得出你是很受伤.愿意和我一起试着探索下事情缘由吗?<think><set name="topic">缘由</set>></think></li>
+             </condition>
+        </template>
+    </category>
+    <category>
+       <pattern>我很 * </pattern>
+       <that>还记得当时你的情绪是怎样的吗</that>
+       <template>你当时觉得很<set name="mood"><star /></set>,除了情绪之外,还有什么身体上的感受吗?</template>
+    </category>
+</topic>
+
+    <topic name="缘由">
+        <category>
+           <pattern>好 * </pattern>
+            <that>好的 看得出你是很受伤 愿意和我一起试着探索下事情缘由吗</that>
+           <template>
+            你觉得这种受伤的感觉是自己的想法导致的吗?
+           </template>
+        </category>
+
+        <category>
+            <pattern>* 算了 *</pattern>
+            <template><think><set name="topic">探索</set></think>></template>
+        </category>
+        <category>
+            <pattern>是的</pattern>
+            <that>你觉得这种受伤的感觉是自己的想法导致的吗</that>
+            <template>
+                那我你做一个角色换位游戏吧!
+            </template>
+        </category>
+        <category>
+            <pattern>好 *</pattern>
+            <that>那我你做一个角色换位游戏吧</that>
+            <template>想象一下如果你朋友遇到这样的事情,你会怎么帮助他呢?</template>
+        </category>
+        <category>
+            <pattern>* 算了 *</pattern>
+            <that>那我你做一个角色换位游戏吧</that>
+            <template>那好吧</template>
+        </category>
+        <category>
+            <pattern>我想不到</pattern>
+            <that>想象一下如果你朋友遇到这样的事情 你会怎么帮助他呢</that>
+            <template>没关系,我这里有其他人的例子,你愿意看一看吗?</template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <that>想象一下如果你朋友遇到这样的事情 你会怎么帮助他呢</that>
+            <template>很好看来你已经有了自己的一些新想法,那么我这里有一些其他人的例子你愿意看一下吗?</template>
+        </category>
+        <category>
+            <pattern>* 好 *</pattern>
+            <that>没关系 我这里有其他人的例子 你愿意看一看吗</that>
+            <template>有的人可能会想:这个人怎么这样对我,一点也不懂得感恩,可能我看人不怎么准,居然把他当朋友了.也有人会想:我对这份关系的理解可能在别人眼里并没有那么重要,所以我要求别人一定回报,这也不合适.还有人会这么想:可能我认为好的别人未必觉得好.试着体会一下,以上这样的想法会让你好些吗?</template>
+        </category>
+        <category>
+            <pattern>感觉*</pattern>
+            <that>有的人可能会想 这个人怎么这样对我 一点也不懂得感恩 可能我看人不怎么准 居然把他当朋友了 也有人会想 我对这份关系的理解可能在别人眼里并没有那么重要 所以我要求别人一定回报 这也不合适 还有人会这么想 可能我认为好的别人未必觉得好 试着体会一下 以上这样的想法会让你好些吗</that>
+            <template>好的,那我们试着写一个让自己不那么难受的新想法</template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <that>好的 那我们试着写一个让自己不那么难受的新想法</that>
+            <template>好些了吗?</template>
+        </category>
+        <category>
+            <pattern>好*</pattern>
+            <template>YEAH,我们现在发现了让我们受伤的是我们自己的想法,而改变想法可以帮我们改变情绪感受,这是一个大发现.那么你愿意和我继续探索一下,我们这种自我攻击的方法是怎么产生的吗?</template>
+        </category>
+
+        <category>
+            <pattern>*愿意</pattern>
+            <that>YEAH 我们现在发现了让我们受伤的是我们自己的想法 而改变想法可以帮我们改变情绪感受 这是一个大发现 那么你愿意和我继续探索一下 我们这种自我攻击的方法是怎么产生的吗</that>
+            <template>让我们从几个小问题开始吧.首先,当你第一次感到被对方忽视的后.有没有在之后对你们关系中自己是否被忽视这件事更警惕了?</template>
+        </category>
+        <category>
+            <pattern>有的</pattern>
+            <that>让我们从几个小问题开始吧 首先 当你第一次感到被对方忽视的后 有没有在之后对你们关系中自己是否被忽视这件事更警惕了</that>
+            <template>那么,在之后的相处过程中你和之前有什么不同吗?</template>
+        </category>
+        <category>
+            <pattern>没有</pattern>
+            <that>那么 在之后的相处过程中你和之前有什么不同吗 </that>
+            <template>好的,那你会经常觉得自己是个容易被忽视的人吗?</template>
+        </category>
+        <category>
+            <pattern>会的</pattern>
+            <that>好的 那你会经常觉得自己是个容易被忽视的人吗</that>
+            <template>能描述下你对自己的评价是什么样的吗?</template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <that>能描述下你对自己的评价是什么样的吗</that>
+            <template>你会觉得是应为自己不够好才会被他人忽视吗?</template>
+        </category>
+        <category>
+            <pattern>会的</pattern>
+            <that>你会觉得是应为自己不够好才会被他人忽视吗</that>
+            <template>容易被忽视和觉得自己不够好是相关的.如果觉得自己不够好就会认为自己不值得被他人重视,那么我们是不是会觉得更容易找到被他人忽视的证据呢?</template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <that>容易被忽视和觉得自己不够好是相关的 如果觉得自己不够好就会认为自己不值得被他人重视 那么我们是不是会觉得更容易找到被他人忽视的证据呢</that>
+            <template><think><set name="topic">整理</set></think>让我们在来整理下来龙去脉,当我们感到被对方忽视后,在之后的交往中可能会更警惕被忽视的情况是否发生.我们可能会有"自己是个容易被忽视的人"的想法,这个想法让我们对兹省的价值卓出了消极的判断.这又促使我们更容易关注和找到自己被忽视的证据."被忽视-我总是被忽视-我不值得被尊重-我果然又被忽视了",他们首尾相连成为了自我攻击的恶性循环.</template>
+        </category>
+    </topic>
+
+
+
+<topic name='整理'>
+    <category>
+        <pattern>原来*</pattern>
+        <template>这个循环中的想法来自于亮了认知歪曲,一种被称为"过度概括",他导致我们对一个现象的成因只有一种解释,无法看到更多的可能性.比如之前那些让你好受一些的想法.另一种被称为"选择性注意".当我们认为一件事是A,就会更容易注意到支持A的信息,同时屏蔽支持B的内容,就像我们找不到支持"自己是好的"这一观点的证据一样的.</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>这个循环中的想法来自于亮了认知歪曲 一种被称为 过度概括  他导致我们对一个现象的成因只有一种解释 无法看到更多的可能性 比如之前那些让你好受一些的想法 另一种被称为 选择性注意  当我们认为一件事是A 就会更容易注意到支持A的信息 同时屏蔽支持B的内容 就像我们找不到支持 自己是好的 这一观点的证据一样的</that>
+        <template>所以一个人如果不自信,那么他一定找不到自己好的地方,就算别人提供了好的证据,他也不会相信,而随着他不断寻求不好的证据,原来属于优点的位置也会被缺点所占据,就像一块花园,如果任由杂草肆意,那么花朵也无处安身.</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>所以一个人如果不自信 那么他一定找不到自己好的地方 就算别人提供了好的证据 他也不会相信 而随着他不断寻求不好的证据 原来属于优点的位置也会被缺点所占据 就像一块花园 如果任由杂草肆意 那么花朵也无处安身</that>
+        <template>好的,首先你觉得一个人的优点是天生就有还是后天培养的呢?</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>好的 首先你觉得一个人的优点是天生就有还是后天培养的呢</that>
+        <template>嗯,那你能举一些<star/>的例子吗?</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>就像想法可以改变一样,优点也是可以更具需求陪养的,那么你希望自己可以获得哪些优点呢?</template>
+    </category>
+    <category>
+    <pattern>*</pattern>
+    <that>就像想法可以改变一样 优点也是可以更具需求陪养的 那么你希望自己可以获得哪些优点呢 </that>
+    <template>很好你已经有目标呢,那么大家继续努力吧!</template>
+    </category>
+</topic>
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+
+<!--<category>-->
+    <!--<pattern></pattern>-->
+    <!--<template></template>-->
+<!--</category>-->
+</aiml>

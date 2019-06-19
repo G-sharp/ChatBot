@@ -1,0 +1,29 @@
+<aiml version="1.0" encoding = "UTF-8">
+
+<category>
+<pattern>LOAD CN TEST</pattern>
+<template>
+
+<!-- Load chinese AIML set -->
+<!-- <learn>cn-profile.aiml</learn> -->
+    <learn>AIMLSet/psy-01.aiml</learn>
+</template>
+</category>
+
+<category>
+        <pattern>LOAD TEST</pattern>
+            <template>
+                <learn>AIMLSet/psy-01.aiml</learn>
+                <learn>AIMLSet/sturobot.aiml</learn>
+            </template>
+</category>
+
+<category>
+        <pattern>LOAD TOPIC</pattern>
+            <template>
+<!-- Load chinese AIML set -->
+                <learn>AIMLSet/psy-dialog.aiml</learn>
+            </template>
+</category>
+
+</aiml>
