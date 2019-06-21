@@ -26,24 +26,24 @@ dialog = ['为什么我付出那么多却没有回报?', '我一直把他当成�
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile="bot_brain.brn")
 else:
-    kernel.bootstrap(learnFiles="AIMLSet/cn-startup.xml", commands="LOAD TEST")
+    kernel.bootstrap(learnFiles="AIMLSet/cn-startup.xml", commands="LOAD CN TEST")
     # kernel.saveBrain("bot_brain.brn")
 if __name__ == '__main__':
     print("@@TEST START...@@")
-    time.sleep(1)
-    for msg in dialog:
-        print("Human: ", end='')
-        for item in msg:
-            # time.sleep(0.1)
-            print(item, end='')
-        print(' ')
-        res = kernel.respond(msg).replace(' ', '')
-        print('BOT: ', end='')
-        for item in res:
-            # time.sleep(0.1)
-            print(item, end='')
-        # time.sleep(1)
-        print(' ')
+    # time.sleep(1)
+    # for msg in dialog:
+    #     print("Human: ", end='')
+    #     for item in msg:
+    #         time.sleep(0.1)
+    #         print(item, end='')
+    #     print(' ')
+    #     res = kernel.respond(msg).replace(' ', '')
+    #     print('BOT: ', end='')
+    #     for item in res:
+    #         time.sleep(0.1)
+    #         print(item, end='')
+    #     time.sleep(1)
+    #     print(' ')
     while True:
         message = input("Enter your message to the bot: ")
         if message == "quit":

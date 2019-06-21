@@ -146,36 +146,49 @@
             <that>YEAH 我们现在发现了让我们受伤的是我们自己的想法 而改变想法可以帮我们改变情绪感受 这是一个大发现 那么你愿意和我继续探索一下 我们这种自我攻击的方法是怎么产生的吗</that>
             <template>让我们从几个小问题开始吧.首先,当你第一次感到被对方忽视的后.有没有在之后对你们关系中自己是否被忽视这件事更警惕了?</template>
         </category>
+
+        <category>
+            <pattern>愿意</pattern>
+            <that>YEAH 我们现在发现了让我们受伤的是我们自己的想法 而改变想法可以帮我们改变情绪感受 这是一个大发现 那么你愿意和我继续探索一下 我们这种自我攻击的方法是怎么产生的吗</that>
+            <template>让我们从几个小问题开始吧.首先,当你第一次感到被对方忽视的后.有没有在之后对你们关系中自己是否被忽视这件事更警惕了?</template>
+        </category>
+
         <category>
             <pattern>有的</pattern>
             <that>让我们从几个小问题开始吧 首先 当你第一次感到被对方忽视的后 有没有在之后对你们关系中自己是否被忽视这件事更警惕了</that>
             <template>那么,在之后的相处过程中你和之前有什么不同吗?</template>
         </category>
+
         <category>
             <pattern>没有</pattern>
             <that>那么 在之后的相处过程中你和之前有什么不同吗 </that>
             <template>好的,那你会经常觉得自己是个容易被忽视的人吗?</template>
         </category>
+
         <category>
             <pattern>会的</pattern>
             <that>好的 那你会经常觉得自己是个容易被忽视的人吗</that>
             <template>能描述下你对自己的评价是什么样的吗?</template>
         </category>
+
         <category>
             <pattern>*</pattern>
             <that>能描述下你对自己的评价是什么样的吗</that>
             <template>你会觉得是应为自己不够好才会被他人忽视吗?</template>
         </category>
+
         <category>
             <pattern>会的</pattern>
             <that>你会觉得是应为自己不够好才会被他人忽视吗</that>
             <template>容易被忽视和觉得自己不够好是相关的.如果觉得自己不够好就会认为自己不值得被他人重视,那么我们是不是会觉得更容易找到被他人忽视的证据呢?</template>
         </category>
+
         <category>
             <pattern>*</pattern>
             <that>容易被忽视和觉得自己不够好是相关的 如果觉得自己不够好就会认为自己不值得被他人重视 那么我们是不是会觉得更容易找到被他人忽视的证据呢</that>
             <template><think><set name="topic">整理</set></think>让我们在来整理下来龙去脉,当我们感到被对方忽视后,在之后的交往中可能会更警惕被忽视的情况是否发生.我们可能会有"自己是个容易被忽视的人"的想法,这个想法让我们对兹省的价值卓出了消极的判断.这又促使我们更容易关注和找到自己被忽视的证据."被忽视-我总是被忽视-我不值得被尊重-我果然又被忽视了",他们首尾相连成为了自我攻击的恶性循环.</template>
         </category>
+
     </topic>
 
 
@@ -210,63 +223,29 @@
         <template><think><set name="topic">闲聊</set></think>,那么大家继续努力吧!</template>
     </category>
 </topic>
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
 
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
+<category>
+    <pattern>天气*</pattern>
+    <template><think><set name="topic">天气</set></think>那你在哪呢?</template>
+</category>
+<category>
+    <pattern>查*天气</pattern>
+    <template><think><set name="topic">天气</set></think>那你在哪呢?</template>
+</category>
+    <category>
+            <pattern>天询</pattern>
+            <template><system>python chatbot/getweather.py realtime 南京</system></template>
+    </category>
+<topic name="天气">
+    <category>
+        <pattern>我在*</pattern>
+        <template><system>python chatbot/getweather.py realtime <set name="city"><star/></set></system></template>
+   </category>
+     <category>
+            <pattern>*</pattern>
+            <that>那你在哪呢</that>
+          <template><system>python chatbot/getweather.py realtime <set name="city"><star/></set></system></template>
+     </category>
+</topic>
 
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
-
-<!--<category>-->
-    <!--<pattern></pattern>-->
-    <!--<template></template>-->
-<!--</category>-->
 </aiml>
