@@ -11,7 +11,7 @@ k = aiml.Kernel()
 k.learn("AIMLSet/cn-startup.xml")
 # k.learn("ChatBot/cn-test.aiml")
 # k.learn("cn-startup.xml")
-k.respond('LOAD TEST')
+k.respond('LOAD TOPIC')
 # k.learn("psy-dialog.aiml")
 # Use the 'respond' method to compute the response
 # to a user's input string.  respond() returns

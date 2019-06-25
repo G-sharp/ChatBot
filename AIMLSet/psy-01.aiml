@@ -16,19 +16,6 @@
 <srai>TIME</srai>
 </template>
 </category>
-
-<category>
-<pattern>TIME</pattern>
-<template>
- 现在是<date format="%Y"/>
-</template>
-</category>
-
-<category>
-<pattern>为什么我*没有回报</pattern>
-<template>可以和我聊聊当时发生了什么嘛 ?<think><set name="topic">感受</set></think></template>
-</category>
-
 <category>
     <pattern>*</pattern>
     <that>抱歉 我还不能理解你说的.</that>
@@ -56,9 +43,28 @@
     <template>我是智芯人啊,叫我小智就好了!</template>
 </category>
 <category>
+<pattern>TIME</pattern>
+<template>
+ 现在是<date format="%Y"/>
+</template>
+</category>
+<category>
     <pattern>我叫*</pattern>
     <template>你好,<set name="master"><formal><star/></formal></set>,终于等到你~</template>
 </category>
+
+<category>
+    <pattern>我好郁闷</pattern>
+    <template><think><set name="topic">郁闷</set></think>你怎么啦?</template>
+</category>
+
+<category>
+<pattern>为什么我*没有回报</pattern>
+<template>可以和我聊聊当时发生了什么嘛 ?<think><set name="topic">感受</set></think></template>
+</category>
+
+
+
 <topic name="感受">
     <category>
       <pattern>*</pattern>
@@ -219,7 +225,7 @@
     <category>
     <pattern>*</pattern>
     <that>就像想法可以改变一样 优点也是可以更具需求陪养的 那么你希望自己可以获得哪些优点呢 </that>
-        <template><think><set name="topic">闲聊</set></think>,那么大家继续努力吧!</template>
+        <template><think><set name="topic">自由话题</set></think>,那么大家继续努力吧!</template>
     </category>
 </topic>
 

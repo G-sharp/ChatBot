@@ -54,7 +54,7 @@
 </category>
 
 
-
+<topic name="考前焦虑">
 <category>
     <pattern>* 我感到很*</pattern>
     <that>可以和我分享下发生了什么事情吗</that>
@@ -165,5 +165,5 @@
     <that>你想锻炼哪些方面能力</that>
     <template>好的,一起加油吧!</template>
 </category>
-
+</topic>
 </aiml>
