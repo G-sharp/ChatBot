@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
+  <topic name="自由话题">
     <category>
         <pattern>新年快乐</pattern>
         <template>恭喜发财</template>
     </category>
     <category>
         <pattern>我帅不帅</pattern>
-        <template>帅帅的一塌糊涂可以迷死万千少女哦也我哦迷死你了亚麻带</template>
+        <template>帅帅的一塌糊涂</template>
     </category>
     <category>
         <pattern>你是*吗</pattern>
@@ -1690,4 +1691,5 @@
         <pattern>法克鱿</pattern>
         <template>那是啥</template>
     </category>
+  </topic>
 </aiml>

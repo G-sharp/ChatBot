@@ -43,7 +43,7 @@
 <category>
     <pattern>*</pattern>
     <that>不如你换个问题吧</that>
-    <template>T_T,还是不明白!</template>
+    <template>T_T, 还是不明白!</template>
 </category>
 
 <category>
@@ -80,10 +80,9 @@
        <template>你当时觉得很<set name="mood"><star /></set>,除了情绪之外,还有什么身体上的感受吗?</template>
     </category>
 </topic>
-
     <topic name="缘由">
         <category>
-           <pattern>好 * </pattern>
+           <pattern>好*</pattern>
             <that>好的 看得出你是很受伤 愿意和我一起试着探索下事情缘由吗</that>
            <template>
             你觉得这种受伤的感觉是自己的想法导致的吗?
@@ -107,7 +106,7 @@
             <template>想象一下如果你朋友遇到这样的事情,你会怎么帮助他呢?</template>
         </category>
         <category>
-            <pattern>* 算了 *</pattern>
+            <pattern>*算了*</pattern>
             <that>那我你做一个角色换位游戏吧</that>
             <template>那好吧</template>
         </category>

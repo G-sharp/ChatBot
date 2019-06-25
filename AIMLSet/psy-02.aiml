@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<meta name="author" content="Gsharp"/>
+<meta name="language" content="zh"/>
+
+<category>
+    <pattern>不太好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>可以和我分享下发生了什么事情吗?</template>
+</category>
+
+<category>
+    <pattern>不*好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>可以和我分享下发生了什么事情吗?</template>
+</category>
+
+<category>
+    <pattern>还好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>不错,请继续保持!</template>
+</category>
+
+<category>
+    <pattern>还好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>那不错,请继续保持!</template>
+</category>
+<category>
+    <pattern>你好</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>早</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>哈喽</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>Hi</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>好久不见</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>HELLO</pattern>
+    <template>哈喽,今天感觉怎么样呀?</template>
+</category>
+
+
+
+<category>
+    <pattern>* 我感到很*</pattern>
+    <that>可以和我分享下发生了什么事情吗</that>
+    <template><think><set name="情绪"><star index="2"/></set><set name="事情"><input/></set>></think>嗯,你最近感到很<star index="2"/>,那如果来给<star index="2"/>打个分,会是多少呢?(1-10分)</template>
+</category>
+
+<category>
+    <pattern>*分</pattern>
+    <template><think><set name="情绪打分"><star/></set></think>除了<get name="情绪"/>，还有其他情绪吗？(比如担忧、害怕、烦躁、后悔、郁闷、生气...)没有请回答没了.</template>
+</category>
+
+<category>
+    <pattern>我还感到*</pattern>
+    <that>*</that>
+    <template><think><set name="情绪2"><star index="1"/></set></think>嗯,你最近感到很<star/>,那如果来给<star/>打个分,会是多少呢?(1-10分)</template>
+</category>
+
+<category>
+    <pattern>没了</pattern>
+    <template>好的,你会不会有以下的身体感受?心慌,注意力不集中,胸闷,睡不好,还是没有?</template>
+</category>
+
+<category>
+    <pattern>睡不好</pattern>
+    <that>好的 你会不会有以下的身体感受 心慌 注意力不集中 胸闷 睡不好 还是没有</that>
+    <template>这种状态持续多久了?</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>这种状态持续多久了</that>
+    <template>嗯,那你还记得当你<input index="2"/>,自己想到什么吗?</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>嗯 *</that>
+    <template>好的,我大概了解了.发生了"<get name="事情"/>"对吧,而且你还感到<get name="情绪2"/>.并且产生了"<star/>"这样的想法. </template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>好的 *</that>
+    <template>你是不是感觉快崩溃了,并且认定这次考试肯定考不好了?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>你是不是感觉快崩溃了 并且认定这次考试肯定考不好了 </that>
+    <template>那你有多相信考不好这件事是真的呢?百分制哦!</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>那你有多相信考不好这件事是真的呢 百分制哦 </that>
+    <template>当你认为自己这次肯定考不好的时候,焦虑感是不是更严重了?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>当你认为自己这次肯定考不好的时候 焦虑感是不是更严重了 </that>
+    <template>那你肯定考不好这件事,是事实还是想法呢?</template>
+</category>
+<category>
+    <pattern>事实</pattern>
+    <that>那你肯定考不好这件事 是事实还是想法呢</that>
+    <template>原来如此,事实是已经发生并且客观上不可以改变的,而考试这件事还没有发生,所以“我肯定考不好”是想法而非事实.</template>
+</category>
+<category>
+    <pattern>想法</pattern>
+    <that>那你肯定考不好这件事 是事实还是想法呢</that>
+    <template>我们现在已经知道了,我肯定考不好”只是我自己的一个想法.而不是事实,这会儿你感觉到你的<get name="情绪"/>情绪下降了吗?你原来是<get name="情绪分值"/> </template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>原来如此 *</that>
+    <template>当我们焦虑情绪稍微缓解一些,我考不好的可能性是不是会下降?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>我们现在*</that>
+    <template>当我们焦虑情绪稍微缓解一些,我考不好的可能性是不是会下降?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>当我们焦虑情绪稍微缓解一些 我考不好的可能性是不是会下降</that>
+    <template>既然我们考不好的可能性下降了,那我是不是更没有那么焦虑了?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>既然我们考不好的可能性下降了 那我是不是更没有那么焦虑了</that>
+    <template>当我们没有那么焦虑的时候,是不是考好的可能性就越来越高了?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>当我们没有那么焦虑的时候 是不是考好的可能性就越来越高了</that>
+    <template>我们发现,当我们产生“我肯定考不好”的想法时,我们感到<get name="情绪"/>,而这种情绪会导致<get name="情绪2"/>,从而导致复习效率下降等情况,那我考不好的可能性就越来越贴近事实,而“我肯定考不好”的想法会越来越坚信,<get name="情绪"/>情绪又会越来越严重,想法和情绪一起形成了一个恶性循环,从而导致我最后真的会考不好.现在我们应该开始定自己的目标,然后立即行动起来!</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>我们发现 *</that>
+    <template>那你同意通过不断练习提升自我能力吗?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>那你同意通过不断练习提升自我能力吗</that>
+    <template>你想锻炼哪些方面能力?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>你想锻炼哪些方面能力</that>
+    <template>好的,一起加油吧!</template>
+</category>
+
+</aiml>

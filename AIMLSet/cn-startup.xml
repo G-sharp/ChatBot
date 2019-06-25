@@ -3,10 +3,7 @@
 <category>
 <pattern>LOAD CN TEST</pattern>
 <template>
-
-<!-- Load chinese AIML set -->
-<!-- <learn>cn-profile.aiml</learn> -->
-    <learn>AIMLSet/psy-01.aiml</learn>
+    <learn>AIMLSet/psy-02.aiml</learn>
 </template>
 </category>
 
@@ -21,8 +18,7 @@
 <category>
         <pattern>LOAD TOPIC</pattern>
             <template>
-<!-- Load chinese AIML set -->
-                <learn>AIMLSet/psy-dialog.aiml</learn>
+                <learn>AIMLSet/psy-02.aiml</learn>
             </template>
 </category>
 
