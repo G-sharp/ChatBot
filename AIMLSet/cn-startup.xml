@@ -17,7 +17,7 @@
 
 <category>
         <pattern>LOAD TOPIC</pattern>
-            <template>\
+            <template>
                 <learn>AIMLSet/psy-01.aiml</learn>
                 <learn>AIMLSet/psy-02.aiml</learn>
                  <learn>AIMLSet/sturobot.aiml</learn>

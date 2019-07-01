@@ -8,23 +8,42 @@
 <category>
     <pattern>不太好</pattern>
     <that>哈喽 今天感觉怎么样呀</that>
-    <template>可以和我分享下发生了什么事情吗?</template>
+    <template><think><set name="topic">考前焦虑</set></think>可以和我分享下发生了什么事情吗?</template>
 </category>
 
 <category>
     <pattern>不*好</pattern>
     <that>哈喽 今天感觉怎么样呀</that>
-    <template>可以和我分享下发生了什么事情吗?</template>
+    <template><think><set name="topic">考前焦虑</set></think>可以和我分享下发生了什么事情吗?</template>
+</category>
+    <category>
+    <pattern>*差</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template><think><set name="topic">考前焦虑</set></think>可以和我分享下发生了什么事情吗?</template>
+</category>
+<category>
+    <pattern>不怎么样</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template><think><set name="topic">考前焦虑</set></think>可以和我分享下发生了什么事情吗?</template>
+</category>
+<category>
+    <pattern>*难受</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template><think><set name="topic">考前焦虑</set></think>可以和我分享下发生了什么事情吗?</template>
+</category>
+<category>
+    <pattern>还好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>不错,那请继续保持!</template>
 </category>
 
 <category>
     <pattern>还好</pattern>
     <that>哈喽 今天感觉怎么样呀</that>
-    <template>不错,请继续保持!</template>
+    <template>那不错,请继续保持!</template>
 </category>
-
-<category>
-    <pattern>还好</pattern>
+    <category>
+    <pattern>不错</pattern>
     <that>哈喽 今天感觉怎么样呀</that>
     <template>那不错,请继续保持!</template>
 </category>
@@ -56,20 +75,41 @@
 
 <topic name="考前焦虑">
 <category>
-    <pattern>* 我感到很*</pattern>
+    <pattern>*我感到很*</pattern>
     <that>可以和我分享下发生了什么事情吗</that>
-    <template><think><set name="情绪"><star index="2"/></set><set name="事情"><input/></set>></think>嗯,你最近感到很<star index="2"/>,那如果来给<star index="2"/>打个分,会是多少呢?(1-10分)</template>
+    <template><think><set name="情绪"><star index="2"/></set><set name="事情"><input/></set>></think>你最近感到很<star index="2"/>,那如果来给<star index="2"/>打个分,会是多少呢?(1-10分)</template>
+</category>
+
+<category>
+    <pattern>我*了</pattern>
+    <that>可以和我分享下发生了什么事情吗</that>
+    <template><think><set name="事情"><star/></set>></think>你感觉如何?</template>
+</category>
+
+<category>
+    <pattern>我感觉很*</pattern>
+    <that>可以和我分享下发生了什么事情吗</that>
+    <template><think><set name="情绪"><star index="1"/></set></think>你最近感到很<star index="1"/>,那如果来给<star index="1"/>打个分,会是多少呢?(1-10分)</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>可以和我分享下发生了什么事情吗</that>
+    <template><think><set name="情绪"><star index="1"/></set></think>你最近感到很<star index="1"/>,那如果来给<star index="1"/>打个分,会是多少呢?(1-10分)</template>
 </category>
 
 <category>
     <pattern>*分</pattern>
+
     <template><think><set name="情绪打分"><star/></set></think>除了<get name="情绪"/>，还有其他情绪吗？(比如担忧、害怕、烦躁、后悔、郁闷、生气...)没有请回答没了.</template>
 </category>
 
 <category>
     <pattern>我还感到*</pattern>
-    <that>*</that>
-    <template><think><set name="情绪2"><star index="1"/></set></think>嗯,你最近感到很<star/>,那如果来给<star/>打个分,会是多少呢?(1-10分)</template>
+    <template><think><set name="情绪2"><star index="1"/></set></think>你最近感到很<star/>,那如果来给<star/>打个分,会是多少呢?(1-10分)</template>
+</category>
+<category>
+    <pattern>我感到*</pattern>
+    <template><think><set name="情绪2"><star index="1"/></set></think>你最近感到很<star/>,那如果来给<star/>打个分,会是多少呢?(1-10分)</template>
 </category>
 
 <category>

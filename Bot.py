@@ -6,10 +6,10 @@ import time
 import aiml
 import random
 kernel = aiml.Kernel()
-# dialog = ['为什么我付出那么多却没有回报?', '我一直把他当成是我最好的朋友,但是遇到困难他居然帮别人也不帮助我!', '我很委屈', '我感觉很累', '我想我大概是看错了人', '我在想是不是我情商太低了', '是不是我太容易相信别人了?', '好的', '是的',
-#           '好吧', '是的', '好的', '我想不到', '嗯好的', '感觉会的', '我会有这样的新想法...', '好多了', '我愿意', '有的', '没有', '会的', '我是一个很容易激动的人', '会的',
-#           '是的', '原来是这样啊', '继续', '那我们如何让庄稼长得更好呢', '天生的', '记忆力很好', '很强的执行力,敏捷的反应能力,幽默感']
-dialog = ['你好', '不太好', '最近快要考试了，我感到很焦虑', '7分', '我还感到烦躁', '7分', '没了', '睡不好', '一周了', '我想到了我应该早些复习就不会这么手忙脚乱了!'
+dialog = ['我好郁闷','为什么我付出那么多却没有回报?', '我一直把他当成是我最好的朋友,但是遇到困难他居然帮别人也不帮助我!', '我很委屈', '我感觉很累', '我想我大概是看错了人', '我在想是不是我情商太低了', '是不是我太容易相信别人了?', '好的', '是的',
+          '好吧', '是的', '好的', '我想不到', '嗯好的', '感觉会的', '我会有这样的新想法...', '好多了', '我愿意', '有的', '没有', '会的', '我是一个很容易激动的人', '会的',
+          '是的', '原来是这样啊', '继续', '那我们如何让庄稼长得更好呢', '天生的', '记忆力很好', '很强的执行力,敏捷的反应能力,幽默感']
+dialog_2 = ['你好', '不太好', '最近快要考试了,我感到很焦虑', '7分', '我还感到烦躁', '7分', '没了', '睡不好', '一周了', '我想到了我应该早些复习就不会这么手忙脚乱了!'
           , '是的', '是的', '百分之六十吧', '是的', '事实', '是的', '我感觉稍微缓解了一些', '对的', '是的', '好啊!', '好的', '我还想锻炼我区分想法和事实的能力']
 
 # Use the 'learn' method to load the contents
@@ -32,19 +32,49 @@ else:
     # kernel.saveBrain("bot_brain.brn")
 if __name__ == '__main__':
     print("@@TEST START...@@")
-    time.sleep(1)
+    # time.sleep(1)
     for msg in dialog:
         print("Human: ", end='')
         for item in msg:
-            time.sleep(0.1)
+            # time.sleep(0.1)
             print(item, end='')
         print(' ')
         res = kernel.respond(msg).replace(' ', '')
         print('BOT: ', end='')
         for item in res:
-            time.sleep(0.1)
+            # time.sleep(0.1)
             print(item, end='')
-        time.sleep(1)
+        # time.sleep(1)
+        print(' ')
+    print("@@TEST START...@@")
+        # time.sleep(1)
+    for msg in dialog_2:
+        print("Human: ", end='')
+        for item in msg:
+            # time.sleep(0.1)
+            print(item, end='')
+        print(' ')
+        res = kernel.respond(msg).replace(' ', '')
+        print('BOT: ', end='')
+        for item in res:
+            # time.sleep(0.1)
+            print(item, end='')
+            # time.sleep(1)
+        print(' ')
+    print("@@TEST START...@@")
+    # time.sleep(1)
+    for msg in dialog:
+        print("Human: ", end='')
+        for item in msg:
+            # time.sleep(0.1)
+            print(item, end='')
+        print(' ')
+        res = kernel.respond(msg).replace(' ', '')
+        print('BOT: ', end='')
+        for item in res:
+            # time.sleep(0.1)
+            print(item, end='')
+        # time.sleep(1)
         print(' ')
     while True:
         message = input("Enter your message to the bot: ")

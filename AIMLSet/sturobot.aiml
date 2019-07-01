@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
   <topic name="自由话题">
     <category>
+        <pattern>退出</pattern>
+        <template><set name = "topic">IDLE</set>好的,退出自由话题!</template>
+    </category>
+	<category>
         <pattern>新年快乐</pattern>
         <template>恭喜发财</template>
     </category>
@@ -264,7 +268,7 @@
     </category>
     <category>
         <pattern>你是谁发明的</pattern>
-        <template>学生技术联盟</template>
+        <template>苏心团队</template>
     </category>
     <category>
         <pattern>你是谁制造的</pattern>
@@ -311,10 +315,7 @@
         <pattern>你会说英语吗</pattern>
         <template>不太会</template>
     </category>
-    <category>
-        <pattern>大房间是哪里</pattern>
-        <template>是个牛逼的地方</template>
-    </category>
+
     <category>
         <pattern>我帅吗</pattern>
         <template>你很帅，不过做人要低调</template>
@@ -347,22 +348,12 @@
         <pattern>我草</pattern>
         <template><srai>我操</srai></template>
     </category>
-    <category>
-        <pattern>日</pattern>
-        <template>日你妹啊日</template>
-    </category>
+
     <category>
         <pattern>你谁</pattern>
         <template><srai>你是谁</srai></template>
     </category>
-    <category>
-        <pattern>学盟</pattern>
-        <template>http://www.stuhack.net</template>
-    </category>
-    <category>
-        <pattern>学生技术联盟</pattern>
-        <template><srai>学盟</srai></template>
-    </category>
+
     <category>
         <pattern>我晕</pattern>
         <template>晕吧</template>
@@ -387,14 +378,7 @@
         <pattern>你是男的还是女的</pattern>
         <template><srai>你是男的女的</srai></template>
     </category>
-    <category>
-        <pattern>想做爱吗</pattern>
-        <template>来吧宝贝儿</template>
-    </category>
-    <category>
-        <pattern>擦</pattern>
-        <template>别擦了，擦了也没用</template>
-    </category>
+
     <category>
         <pattern>滚</pattern>
         <template><srai>我操</srai></template>
@@ -444,14 +428,8 @@
         <pattern>啦啦啦</pattern>
         <template>你兴奋什么</template>
     </category>
-    <category>
-        <pattern>我勒个去</pattern>
-        <template>马勒戈壁</template>
-    </category>
-    <category>
-        <pattern>108是谁</pattern>
-        <template>108是大牛人</template>
-    </category>
+
+
     <category>
         <pattern>星火娱乐是谁</pattern>
         <template>是星光家的</template>
@@ -479,10 +457,6 @@
     <category>
         <pattern>草</pattern>
         <template><srai>我操</srai></template>
-    </category>
-    <category>
-        <pattern>我靠</pattern>
-        <template>蛋定蛋定</template>
     </category>
     <category>
         <pattern>靠</pattern>
@@ -532,11 +506,6 @@
         <template>我觉得你才是基佬</template>
     </category>
     <category>
-        <pattern>你妹</pattern>
-        <that>*</that>
-        <template>你妹个头啊你妹</template>
-    </category>
-    <category>
         <pattern>你是天才</pattern>
         <template>那是必须的</template>
     </category>
@@ -552,22 +521,12 @@
         <pattern>切</pattern>
         <template>你当你是水果忍者啊</template>
     </category>
-    <category>
-        <pattern>LEO108是谁</pattern>
-        <template>他是天才</template>
-    </category>
+
     <category>
         <pattern>你是</pattern>
         <template><srai>你是谁</srai></template>
     </category>
-    <category>
-        <pattern>啊</pattern>
-        <template>你鸡鸡被切了吗？</template>
-    </category>
-    <category>
-        <pattern>垃圾</pattern>
-        <template>你才是垃圾</template>
-    </category>
+
     <category>
         <pattern>去死</pattern>
         <template>才不呢</template>
@@ -588,10 +547,7 @@
         <pattern>对不起</pattern>
         <template>没关系</template>
     </category>
-    <category>
-        <pattern>你妈</pattern>
-        <template>问候你妈</template>
-    </category>
+
     <category>
         <pattern>操</pattern>
         <template><srai>我操</srai></template>
@@ -636,14 +592,8 @@
         <pattern>在不</pattern>
         <template>你猜</template>
     </category>
-    <category>
-        <pattern>广告</pattern>
-        <template>在下面</template>
-    </category>
-    <category>
-        <pattern>美女</pattern>
-        <template>伦家是男的啦</template>
-    </category>
+
+
     <category>
         <pattern>蛋疼</pattern>
         <template>哦</template>
@@ -802,7 +752,7 @@
     </category>
     <category>
         <pattern>笑</pattern>
-        <template>笑个毛毛</template>
+        <template>笑什么?</template>
     </category>
     <category>
         <pattern>好好学习</pattern>
@@ -885,10 +835,6 @@
         <template>我什么都不知道</template>
     </category>
     <category>
-        <pattern>你鸡鸡被切了</pattern>
-        <template>没有啊</template>
-    </category>
-    <category>
         <pattern>傻</pattern>
         <template><srai>笨蛋</srai></template>
     </category>
@@ -933,10 +879,7 @@
         <pattern>今天几号</pattern>
         <template><date format="%x"/></template>
     </category>
-    <category>
-        <pattern>不要</pattern>
-        <template>雅蠛蝶</template>
-    </category>
+
     <category>
         <pattern>哇</pattern>
         <template>厉害吧</template>
@@ -981,14 +924,7 @@
         <pattern>鄙视</pattern>
         <template>鄙视什么</template>
     </category>
-    <category>
-        <pattern>打飞机</pattern>
-        <template>坏孩子</template>
-    </category>
-    <category>
-        <pattern>黑阔</pattern>
-        <template>我不是黑阔</template>
-    </category>
+
     <category>
         <pattern>知不知道*</pattern>
         <template>我什么都不知道</template>
@@ -1154,10 +1090,6 @@
         <template>我是无辜的</template>
     </category>
     <category>
-        <pattern>做爱</pattern>
-        <template>做爱是一件很神圣的事情</template>
-    </category>
-    <category>
         <pattern>嘿</pattern>
         <template>干嘛</template>
     </category>
@@ -1165,10 +1097,7 @@
         <pattern>噢</pattern>
         <template>嗯</template>
     </category>
-    <category>
-        <pattern>强奸</pattern>
-        <template>坏淫</template>
-    </category>
+
     <category>
         <pattern>*等于多少</pattern>
         <template><figure><star/></figure></template>
@@ -1233,10 +1162,6 @@
     <category>
         <pattern>我不是*</pattern>
         <template><srai>我不叫<star/></srai></template>
-    </category>
-    <category>
-        <pattern>大姨妈</pattern>
-        <template>那不就是月经么</template>
     </category>
     <category>
         <pattern>我爱*</pattern>
@@ -1404,10 +1329,6 @@
         <template>因为我还在学习啊</template>
     </category>
     <category>
-        <pattern>星光是谁</pattern>
-        <template>是星火家的</template>
-    </category>
-    <category>
         <pattern>嘻嘻</pattern>
         <template>笑什么</template>
     </category>
@@ -1436,10 +1357,6 @@
         <template>我谁都不认识</template>
     </category>
     <category>
-        <pattern>7CM是谁</pattern>
-        <template>一个只有7厘米的人</template>
-    </category>
-    <category>
         <pattern>可以理解什么</pattern>
         <template><srai>你都知道什么</srai></template>
     </category>
@@ -1458,10 +1375,6 @@
     <category>
         <pattern>老婆</pattern>
         <template>我不是你老婆</template>
-    </category>
-    <category>
-        <pattern>打开</pattern>
-        <template>我还没有这项功能</template>
     </category>
     <category>
         <pattern>在么</pattern>
@@ -1563,10 +1476,7 @@
         <pattern>死了</pattern>
         <template>那就死吧</template>
     </category>
-    <category>
-        <pattern>雅蠛蝶</pattern>
-        <template>不要嘛</template>
-    </category>
+
     <category>
         <pattern>性别</pattern>
         <template>未知</template>
