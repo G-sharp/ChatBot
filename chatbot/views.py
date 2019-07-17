@@ -9,7 +9,7 @@ from chatbot import aimlKernel
 def chat(request):
     dic = {}
     if request.method == 'GET':
-        dic['botResponse'] = aimlKernel.k.respond(request.GET.get('ask', '无语')).replace(' ', '')
+        dic['botResponse'] = aimlKernel.k.respond(request.GET.get('ask', '无语'),request.GET.get('sessionid','test')).replace(' ', '')
         return HttpResponse(json.dumps(dic, ensure_ascii=False))
     else:
         dic['message'] = u'方法错误'

@@ -1,7 +1,6 @@
-﻿x
-zx <?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
- zx
+<topic name ="自由话题">
     <category>
         <pattern>退出</pattern>
         <template><set name = "topic">IDLE</set>好的,退出自由话题!</template>
@@ -21,7 +20,7 @@ zx <?xml version="1.0" encoding="UTF-8"?>
     <category>
         <pattern>你是*</pattern>
         <template>我是<star/>关你什么事</template>
-    </category>
+    </category>a
     <category>
         <pattern>你喜欢*吗</pattern>
         <template>我也不知道我是不是喜欢<star/>，你喜欢<star/>吗</template>

@@ -16,8 +16,16 @@
 <srai>TIME</srai>
 </template>
 </category>
+<category>
+ <pattern>当前话题</pattern>
+ <template>
+ <condition name ="topic">
+ <li value="">还木有话题呢，输入设置话题试试呢</li>
+ <li value="*"> <get name="topic"/></li>
+ </condition>
 
-    <category><pattern>当前话题</pattern><template><get name="topic"/></template></category>
+ </template>
+</category>
 
 
 <category>
@@ -58,7 +66,7 @@
 <category>
 <pattern>TIME</pattern>
 <template>
- 现在是<date format="%Y"/>
+ 现在是<date format="yyyy-mm-dd hh:mm:ss"/>
 </template>
 </category>
 <category>
@@ -76,7 +84,6 @@
 </category>
 <topic name="信任危机">
 <category>
-    <category>
     <pattern>我叫*</pattern>
     <template>你好,<set name="master"><formal><star/></formal></set>,终于等到你~</template>
 </category>
@@ -89,6 +96,7 @@
     <pattern>*心情不好</pattern>
     <template><think><set name="topic">信任危机</set></think>你怎么啦?</template>
 </category>
+<category>
 <pattern>为什么我 * 没有回报</pattern>
 <template>可以和我聊聊当时发生了什么嘛?<think><set name="topic">感受</set></think></template>
 </category>
