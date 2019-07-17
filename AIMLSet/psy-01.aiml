@@ -76,8 +76,21 @@
 </category>
 <topic name="信任危机">
 <category>
-<pattern>为什么我*没有回报</pattern>
-<template>可以和我聊聊当时发生了什么嘛 ?<think><set name="topic">感受</set></think></template>
+    <category>
+    <pattern>我叫*</pattern>
+    <template>你好,<set name="master"><formal><star/></formal></set>,终于等到你~</template>
+</category>
+
+<category>
+    <pattern>我好郁闷</pattern>
+    <template><think><set name="topic">信任危机</set></think>你怎么啦?</template>
+</category>
+<category>
+    <pattern>*心情不好</pattern>
+    <template><think><set name="topic">信任危机</set></think>你怎么啦?</template>
+</category>
+<pattern>为什么我 * 没有回报</pattern>
+<template>可以和我聊聊当时发生了什么嘛?<think><set name="topic">感受</set></think></template>
 </category>
 </topic>
     <category>

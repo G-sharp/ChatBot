@@ -195,11 +195,11 @@
     <that>我们发现 *</that>
     <template>那你同意通过不断练习提升自我能力吗?</template>
 </category>
-<category>
+<category1>
     <pattern>*</pattern>
     <that>那你同意通过不断练习提升自我能力吗</that>
     <template>你想锻炼哪些方面能力?</template>
-</category>
+</category1>
 <category>
     <pattern>*</pattern>
     <that>你想锻炼哪些方面能力</that>
