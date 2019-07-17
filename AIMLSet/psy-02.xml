@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<meta name="author" content="Gsharp"/>
+<meta name="language" content="zh"/>
+
+<category>
+    <pattern>不太好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>可以和我分享下发生了什么事情吗?</template>
+</category>
+
+<category>
+    <pattern>不*好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>可以和我分享下发生了什么事情吗?</template>
+</category>
+
+<category>
+    <pattern>还好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>不错,请继续保持!</template>
+</category>
+
+<category>
+    <pattern>还好</pattern>
+    <that>哈喽 今天感觉怎么样呀</that>
+    <template>那不错,请继续保持!</template>
+</category>
+<category>
+    <pattern>你好</pattern>
+    <template><srai>HELLO</srai>></template>
+</category>
+<category>
+    <pattern>早</pattern>
+    <template><srai>HELLO</srai>></template>
+</category>
+<category>
+    <pattern>哈喽</pattern>
+    <template><srai>HELLO</srai>></template>
+</category>
+<category>
+    <pattern>Hi</pattern>
+    <template><srai>HELLO</srai>></template>
+</category>
+<category>
+    <pattern>好 久 不 见</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>HELLO</pattern>
+    <template>哈喽,今天感觉怎么样呀?</template>
+</category>
+
+
+
+<category>
+    <pattern>自由话题</pattern>
+    <template><think><set topic="情绪">自由话题</set></think>好啊!</template>
+</category>
+
+<category>
+    <pattern>*分</pattern>
+    <template><think><set name="情绪打分"><star/></set></think>除了<get name="情绪"/>，还有其他情绪吗？(比如担忧、害怕、烦躁、后悔、郁闷、生气...)</template>
+</category>
+
+
+<category>
+    <pattern>*</pattern>
+    <that></that>
+    <template></template>
+</category>
+
+<category>
+    <pattern></pattern>
+    <that></that>
+    <template></template>
+</category>
+
+<category>
+    <pattern></pattern>
+    <that></that>
+    <template></template>
+</category>
+
+</aiml>
