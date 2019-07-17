@@ -25,4 +25,6 @@ AIML 中文对话Django接口 基于em-amil库
     ask  |ture    |string|对话内容
     sessionid|ture|string|用户对话ID
   
-  - 演示 
+  - 演示图例 
+  
+    ![avatar](/images/postmancapture.png)
