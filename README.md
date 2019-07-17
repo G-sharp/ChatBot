@@ -27,4 +27,4 @@ AIML 中文对话Django接口 基于em-amil库
   
   - 演示图例 
   
-    ![avatar](/images/postmancapture.png)
+    ![avatar](./images/postmancapture.png)
