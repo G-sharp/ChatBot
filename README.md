@@ -1,8 +1,9 @@
 `python3` `AMIL` `Django`
+
 # ChatBot
 
-AIML 1.0 in Chinese Dialog
-AIML 中文对话Django接口 基于em-amil库
+- AIML 1.0 in Chinese Dialog
+- AIML 中文对话Django接口 基于em-amil库
 
 # 使用安装 
   1. 安装python3环境，及pip 包管理工具
@@ -12,7 +13,7 @@ AIML 中文对话Django接口 基于em-amil库
 # 接口说明
   - 接口地址  
   
-        <ip>:<host>/chat/ask="xxx"&sessionid="xxx"   
+<ip>:<host>/chat/ask="xxx"&sessionid="xxx"   
   
   - 接口HTTP请求类型  
     
