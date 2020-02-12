@@ -1,4 +1,4 @@
-Django==2.2.2
+Django==2.2.10
 em-aiml==1.0.1
 numpy==1.16.4
 pandas==0.24.2
